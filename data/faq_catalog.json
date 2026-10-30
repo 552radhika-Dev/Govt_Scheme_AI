@@ -1,0 +1,344 @@
+{
+  "faqs": [
+    {
+      "faq_id": "FAQ-PMK-01",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Eligibility",
+      "question_en": "Am I eligible for PM-KISAN if I work as a tenant farmer or agricultural laborer without land in my name?",
+      "question_hi": "क्या मैं पीएम-किसान के लिए पात्र हूँ यदि मैं बटाईदार किसान या बिना भूमि वाला कृषि मजदूर हूँ?",
+      "answer_en": "No. Under the official PM-KISAN guidelines, eligibility is strictly limited to landholder farmer families who possess cultivable landholdings registered in their names in the state or UT land revenue records. Agricultural laborers, sharecroppers, and tenant farmers who do not hold title to cultivable land are not eligible.",
+      "answer_hi": "नहीं। आधिकारिक पीएम-किसान दिशानिर्देशों के तहत, पात्रता केवल उन भूस्वामी किसान परिवारों तक सीमित है जिनके नाम राज्य या केंद्र शासित प्रदेश के राजस्व रिकॉर्ड में कृषि योग्य भूमि दर्ज है। कृषि मजदूर, बटाईदार और काश्तकार किसान जिनके नाम पर भूमि नहीं है, वे पात्र नहीं हैं।",
+      "simple_answer_en": "❌ No. You must own farming land registered in your name. Workers and tenant farmers without land documents cannot get this benefit.",
+      "simple_answer_hi": "❌ नहीं। आपके नाम पर सरकारी जमीन के कागज (खतौनी) होने जरूरी हैं। बिना जमीन वाले मजदूर या बटाईदार पात्र नहीं हैं।",
+      "source_fields": ["eligibility_conditions"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 4.1: 'All landholding farmer families, who have cultivable landholding in their names are eligible to get benefits...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Directly grounded in Section 4.1 of PM-KISAN Operational Guidelines."
+    },
+    {
+      "faq_id": "FAQ-PMK-02",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Exclusion",
+      "question_en": "Can a retired government school teacher or civil servant get PM-KISAN benefits?",
+      "question_hi": "क्या कोई सेवानिवृत्त सरकारी शिक्षक या सिविल सेवक पीएम-किसान का लाभ ले सकता है?",
+      "answer_en": "No. The scheme guidelines explicitly exclude all serving or retired officers and employees of Central or State Government ministries, departments, and autonomous bodies, as well as all superannuated pensioners whose monthly pension is ₹10,000 or more (only Class IV / Multi-Tasking Staff are exempt from this exclusion).",
+      "answer_hi": "नहीं। योजना के दिशानिर्देश केंद्र या राज्य सरकार के सभी सेवारत अथवा सेवानिवृत्त कर्मचारियों और अधिकारियों को स्पष्ट रूप से बाहर रखते हैं। साथ ही ₹10,000 या उससे अधिक मासिक पेंशन पाने वाले पेंशनभोगी भी अपात्र हैं (केवल चतुर्थ श्रेणी / एमटीएस कर्मचारी ही छूट प्राप्त हैं)।",
+      "simple_answer_en": "❌ No. Government employees and pensioners getting ₹10,000 or more per month cannot apply.",
+      "simple_answer_hi": "❌ नहीं। सरकारी कर्मचारी और ₹10,000 से अधिक मासिक पेंशन पाने वाले सेवानिवृत्त लोग इस योजना के पात्र नहीं हैं।",
+      "source_fields": ["exclusion_criteria"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 4.2(d)(e): 'All serving or retired officers and employees... All superannuated/retired pensioners whose monthly pension is ₹10,000/- or more (excluding Class IV)...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Directly grounded in Section 4.2 exclusion clauses (d) and (e)."
+    },
+    {
+      "faq_id": "FAQ-PMK-03",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Benefit",
+      "question_en": "How much financial benefit do farmers receive under PM-KISAN and how is it paid?",
+      "question_hi": "पीएम-किसान के तहत किसानों को कितनी वित्तीय सहायता मिलती है और इसका भुगतान कैसे किया जाता है?",
+      "answer_en": "Beneficiaries receive ₹6,000 per financial year. This amount is disbursed in three equal four-monthly installments of ₹2,000 each (April–July, August–November, and December–March) directly into the beneficiary's Aadhaar-linked bank account through Direct Benefit Transfer (DBT).",
+      "answer_hi": "लाभार्थियों को प्रति वित्तीय वर्ष ₹6,000 की राशि मिलती है। यह राशि ₹2,000 की तीन समान किस्तों में (अप्रैल-जुलाई, अगस्त-नवंबर, और दिसंबर-मार्च) सीधे लाभार्थी के आधार से जुड़े बैंक खाते में डीबीटी (DBT) के माध्यम से भेजी जाती है।",
+      "simple_answer_en": "💰 ₹6,000 every year, paid as ₹2,000 three times a year directly into your bank account.",
+      "simple_answer_hi": "💰 साल में कुल ₹6,000 मिलेंगे। हर 4 महीने में ₹2,000 की किस्त सीधे आपके बैंक खाते में आएगी।",
+      "source_fields": ["benefit_amount", "benefit_frequency"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 3: 'Under the Scheme, an amount of Rs. 6,000/- per year is transferred... in three four-monthly installments of Rs. 2000/- each through Direct Benefit Transfer (DBT)...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 3 and 3.2 payment modality."
+    },
+    {
+      "faq_id": "FAQ-PMK-04",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Documents",
+      "question_en": "What documents are required to register for PM-KISAN?",
+      "question_hi": "पीएम-किसान में पंजीकरण के लिए किन दस्तावेजों की आवश्यकता होती है?",
+      "answer_en": "The mandatory documents and details required are: 1. Aadhaar Card; 2. Land ownership record / Record of Rights (Khatauni / RoR) proving cultivable landholding; 3. Active bank account details seeded and linked with Aadhaar; 4. Active mobile number linked to Aadhaar for e-KYC.",
+      "answer_hi": "अनिवार्य दस्तावेज़ इस प्रकार हैं: 1. आधार कार्ड; 2. कृषि योग्य भूमि का स्वामित्व प्रमाण / खतौनी (RoR); 3. आधार से लिंक सक्रिय बैंक खाता; 4. ई-केवाईसी (e-KYC) के लिए आधार से जुड़ा चालू मोबाइल नंबर।",
+      "simple_answer_en": "📄 4 things needed: 1. Aadhaar card; 2. Land paper (Khatauni); 3. Bank passbook linked to Aadhaar; 4. Mobile phone with active SIM.",
+      "simple_answer_hi": "📄 केवल 4 चीजें चाहिए: 1. आधार कार्ड, 2. जमीन की खतौनी, 3. आधार से जुड़ा बैंक खाता, 4. आधार से जुड़ा मोबाइल नंबर।",
+      "source_fields": ["documents_required"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 6: 'Aadhaar seeding is compulsory for release of installment. Proof of land holding through revenue records...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 6 documentation requirements."
+    },
+    {
+      "faq_id": "FAQ-PMK-05",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Application",
+      "question_en": "How can a farmer apply for the PM-KISAN scheme?",
+      "question_hi": "किसान पीएम-किसान योजना के लिए कैसे आवेदन कर सकता है?",
+      "answer_en": "Farmers can apply online via self-registration on the official PM-KISAN portal (pmkisan.gov.in) under 'Farmers Corner' > 'New Farmer Registration'. Alternatively, farmers can apply in person by visiting the nearest Common Service Centre (CSC) or local Village Agriculture Nodal Officer, where biometric e-KYC can be completed.",
+      "answer_hi": "किसान आधिकारिक पोर्टल (pmkisan.gov.in) पर 'फार्मर्स कॉर्नर' > 'नया किसान पंजीकरण' के माध्यम से ऑनलाइन स्वयं आवेदन कर सकते हैं। इसके अलावा, नजदीकी कॉमन सर्विस सेंटर (सीएससी/CSC) या स्थानीय ग्राम कृषि नोडल अधिकारी के पास जाकर बायोमेट्रिक ई-केवाईसी करवाकर भी आवेदन कर सकते हैं।",
+      "simple_answer_en": "📱 Apply on pmkisan.gov.in website or visit your nearest CSC / Jan Seva Kendra with your documents.",
+      "simple_answer_hi": "📱 आप pmkisan.gov.in वेबसाइट पर खुद फॉर्म भर सकते हैं या अपने नजदीकी सीएससी (जन सेवा केंद्र) जाकर अंगूठा लगाकर आवेदन करा सकते हैं।",
+      "source_fields": ["how_to_apply", "official_link"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 7.1: 'Eligible farmers can enroll through self-registration on pmkisan.gov.in or via CSC centers upon biometric authentication...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 7.1 enrolment mechanism."
+    },
+    {
+      "faq_id": "FAQ-PMK-06",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Deadline",
+      "question_en": "What is the last date or deadline to apply for PM-KISAN?",
+      "question_hi": "पीएम-किसान के लिए आवेदन करने की अंतिम तिथि या समय-सीमा क्या है?",
+      "answer_en": "PM-KISAN is an ongoing, continuous entitlement scheme without a cutoff deadline. Eligible farmer families can apply at any time throughout the year.",
+      "answer_hi": "पीएम-किसान एक निरंतर चलने वाली योजना है और इसके लिए कोई अंतिम तिथि नहीं है। पात्र किसान परिवार वर्ष भर में किसी भी समय पंजीकरण करा सकते हैं।",
+      "simple_answer_en": "⏰ No deadline! You can apply anytime throughout the year.",
+      "simple_answer_hi": "⏰ कोई आखिरी तारीख नहीं है। आप साल में कभी भी आवेदन कर सकते हैं।",
+      "source_fields": ["deadline"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 8: 'The PM-KISAN scheme is an ongoing demand-driven entitlement; there is no last date for registration...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 8 continuous enrolment rule."
+    },
+    {
+      "faq_id": "FAQ-PMK-07",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Eligibility Fallback",
+      "question_en": "What is the maximum family annual income limit to qualify for PM-KISAN?",
+      "question_hi": "पीएम-किसान के लिए अधिकतम पारिवारिक वार्षिक आय सीमा क्या है?",
+      "answer_en": "The official approved PM-KISAN scheme record does not specify an annual income ceiling (such as ₹2.5 Lakh or ₹5 Lakh). Instead of an income limit, exclusion is based strictly on whether any family member pays Income Tax, holds institutional land, or belongs to designated high-income government/professional categories.",
+      "answer_hi": "आधिकारिक स्वीकृत पीएम-किसान रिकॉर्ड में कोई वार्षिक आय सीमा (जैसे ₹2.5 लाख या ₹5 लाख) तय नहीं की गई है। आय सीमा के बजाय, अपात्रता इस बात पर निर्भर करती है कि परिवार का कोई सदस्य आयकर देता है या नहीं, या उच्च सरकारी/व्यावसायिक पदों पर है या नहीं।",
+      "simple_answer_en": "ℹ️ There is NO fixed income limit. But if anyone in your family pays Income Tax, you cannot apply.",
+      "simple_answer_hi": "ℹ️ योजना में कोई निश्चित आय सीमा नहीं है। लेकिन अगर आपके परिवार में कोई इनकम टैक्स भरता है तो आप पात्र नहीं हैं।",
+      "source_fields": ["income_ceiling", "exclusion_criteria"],
+      "evidence_quotes": [
+        "Absence verification in Guidelines: No income threshold exists. Exclusions are tax-filing and role-based."
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Addresses field 'income_ceiling' which has status 'not found' in the official record."
+    },
+    {
+      "faq_id": "FAQ-PMK-08",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Exclusion",
+      "question_en": "I paid income tax last year on my small shop, but I also own 1 acre of farmland. Can I receive PM-KISAN?",
+      "question_hi": "मैंने पिछले साल अपनी छोटी दुकान पर आयकर भरा था, लेकिन मेरे पास 1 एकड़ खेती की जमीन भी है। क्या मुझे पीएम-किसान मिल सकता है?",
+      "answer_en": "No. Under Section 4.2(f) of the PM-KISAN guidelines, any person who paid Income Tax in the last assessment year, along with their family, is disqualified from receiving scheme benefits, regardless of land ownership.",
+      "answer_hi": "नहीं। पीएम-किसान दिशानिर्देशों के खंड 4.2(f) के तहत, जिस किसी व्यक्ति ने पिछले कर निर्धारण वर्ष में आयकर का भुगतान किया है, वह और उसका परिवार योजना के लाभ से वंचित रहेगा, भले ही उनके पास खेती की जमीन हो।",
+      "simple_answer_en": "❌ No. If you paid income tax in the last assessment year, you are not eligible.",
+      "simple_answer_hi": "❌ नहीं। यदि आपने पिछले वर्ष इनकम टैक्स भरा है, तो जमीन होने के बावजूद आपको लाभ नहीं मिल सकता।",
+      "source_fields": ["exclusion_criteria"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 4.2(f): 'All persons who paid Income Tax in the last assessment year... are not eligible.'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 4.2(f) tax exclusion."
+    },
+    {
+      "faq_id": "FAQ-PMK-09",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Eligibility Fallback",
+      "question_en": "What is the minimum age required to register as a farmer under PM-KISAN?",
+      "question_hi": "पीएम-किसान के तहत किसान के रूप में पंजीकरण के लिए न्यूनतम आयु क्या है?",
+      "answer_en": "The approved scheme record does not specify a minimum age limit for an applicant. Eligibility is defined solely by legal landholding in state revenue records and family composition (husband, wife, minor children). If an adult owns cultivable land registered in their name, they can apply.",
+      "answer_hi": "स्वीकृत योजना रिकॉर्ड में आवेदक के लिए किसी न्यूनतम आयु सीमा का उल्लेख नहीं है। पात्रता केवल राजस्व रिकॉर्ड में कानूनी भूमि स्वामित्व और पारिवारिक परिभाषा पर आधारित है। यदि किसी वयस्क के नाम पर कृषि भूमि पंजीकृत है, तो वह आवेदन कर सकता है।",
+      "simple_answer_en": "ℹ️ The official record does not set a minimum age. You only need the legal land documents in your name.",
+      "simple_answer_hi": "ℹ️ सरकारी रिकॉर्ड में कोई न्यूनतम उम्र नहीं लिखी है। बस जमीन आपके नाम पर होनी चाहिए।",
+      "source_fields": ["minimum_age", "eligibility_conditions"],
+      "evidence_quotes": [
+        "Absence verification: Review of Guidelines Section 4 shows no explicit age threshold."
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Addresses field 'minimum_age' which is 'not found' in the approved record."
+    },
+    {
+      "faq_id": "FAQ-PMK-10",
+      "scheme_id": "SCHEME-CENTRAL-PMK-001",
+      "category": "Missing Data Fallback",
+      "question_en": "Can I receive PM-KISAN installment money in physical cash or money order?",
+      "question_hi": "क्या मुझे पीएम-किसान की किस्त की राशि नकद या मनी ऑर्डर द्वारा मिल सकती है?",
+      "answer_en": "No. The approved scheme record mandates that payments are released exclusively via Direct Benefit Transfer (DBT) into an active Aadhaar-seeded bank account. The record does not support cash disbursements or money order payments.",
+      "answer_hi": "नहीं। स्वीकृत योजना रिकॉर्ड स्पष्ट करता है कि भुगतान केवल आधार से जुड़े बैंक खाते में प्रत्यक्ष लाभ अंतरण (DBT) द्वारा ही किया जाता है। रिकॉर्ड में नकद या मनी ऑर्डर से भुगतान का कोई प्रावधान नहीं है।",
+      "simple_answer_en": "❌ No cash. Money only goes directly into your bank account through DBT.",
+      "simple_answer_hi": "❌ नकद नहीं मिलेगा। पैसा केवल सीधे आपके बैंक खाते में भेजा जाएगा।",
+      "source_fields": ["benefit_frequency", "documents_required"],
+      "evidence_quotes": [
+        "Operational Guidelines Sec 3.2: '...through Direct Benefit Transfer (DBT) into Aadhaar linked bank accounts...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in DBT payment requirement."
+    },
+    {
+      "faq_id": "FAQ-MLB-01",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Eligibility",
+      "question_en": "I am a 19-year-old unmarried college student residing in Maharashtra. Can I apply for Majhi Ladki Bahin Yojana?",
+      "question_hi": "मैं महाराष्ट्र में रहने वाली 19 वर्षीय अविवाहित कॉलेज छात्रा हूँ। क्या मैं माझी लाड़की बहिन योजना के लिए आवेदन कर सकती हूँ?",
+      "answer_en": "No. Under Section 3 of the Government Resolution, the scheme is strictly applicable only to women aged 21 years completed up to 65 years. Since you are 19 years old, you do not meet the minimum age requirement.",
+      "answer_hi": "नहीं। शासन निर्णय (GR) के खंड 3 के अनुसार, यह योजना केवल 21 वर्ष पूर्ण से लेकर 65 वर्ष तक की आयु की महिलाओं के लिए है। आपकी उम्र 19 वर्ष होने के कारण आप न्यूनतम आयु पात्रता पूरी नहीं करती हैं।",
+      "simple_answer_en": "❌ No. You must be at least 21 years old. Women under 21 cannot apply.",
+      "simple_answer_hi": "❌ नहीं। इस योजना के लिए आपकी उम्र कम से कम 21 वर्ष पूरी होनी चाहिए। 21 से कम उम्र वाली बेटियां पात्र नहीं हैं।",
+      "source_fields": ["eligibility_conditions"],
+      "evidence_quotes": [
+        "GR Section 3: 'Married, widowed, divorced, abandoned and destitute women in the age group 21 to 65 years...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 3 age criteria (21-65)."
+    },
+    {
+      "faq_id": "FAQ-MLB-02",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Eligibility",
+      "question_en": "Our total family annual income is ₹2,80,000. Are we eligible for the Ladki Bahin Yojana?",
+      "question_hi": "हमारे परिवार की कुल वार्षिक आय ₹2,80,000 है। क्या हम लाड़की बहिन योजना के लिए पात्र हैं?",
+      "answer_en": "No. The approved scheme record mandates that the combined annual family income from all sources must not exceed ₹2,50,000 (₹2.5 Lakh). An annual income of ₹2,80,000 exceeds this ceiling, making the applicant ineligible.",
+      "answer_hi": "नहीं। स्वीकृत योजना रिकॉर्ड के अनुसार सभी स्रोतों से परिवार की कुल वार्षिक आय ₹2,50,000 (₹2.5 लाख) से अधिक नहीं होनी चाहिए। ₹2,80,000 की वार्षिक आय इस सीमा से अधिक है, इसलिए आप अपात्र हैं।",
+      "simple_answer_en": "❌ No. Family income must be ₹2,50,000 or less per year.",
+      "simple_answer_hi": "❌ नहीं। परिवार की कुल सालाना कमाई ₹2,50,000 से कम होनी चाहिए। ₹2.80 लाख कमाने वाले पात्र नहीं हैं।",
+      "source_fields": ["eligibility_conditions", "exclusion_criteria"],
+      "evidence_quotes": [
+        "GR Section 3 & 4(a): 'Annual family income up to Rs. 2.50 lakh... Family annual income exceeding Rs. 2.50 Lakh is ineligible.'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 3 income limit of ₹2.5L."
+    },
+    {
+      "faq_id": "FAQ-MLB-03",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Benefit",
+      "question_en": "How much financial aid is provided under Majhi Ladki Bahin Yojana and on what schedule?",
+      "question_hi": "माझी लाड़की बहिन योजना के तहत कितनी वित्तीय सहायता और कब प्रदान की जाती है?",
+      "answer_en": "Eligible women receive ₹1,500 per month. The financial assistance is transferred monthly through Direct Benefit Transfer (DBT) directly into the beneficiary's individual Aadhaar-linked active bank account.",
+      "answer_hi": "पात्र महिलाओं को ₹1,500 प्रति माह मिलते हैं। यह सहायता मासिक आधार पर प्रत्यक्ष लाभ अंतरण (DBT) द्वारा सीधे लाभार्थी के आधार से जुड़े बैंक खाते में जमा की जाती है।",
+      "simple_answer_en": "💰 ₹1,500 every month transferred directly to your bank account.",
+      "simple_answer_hi": "💰 हर महीने ₹1,500 सीधे आपके बैंक खाते में जमा किए जाएंगे।",
+      "source_fields": ["benefit_amount", "benefit_frequency"],
+      "evidence_quotes": [
+        "GR Section 2: 'Rs. 1,500/- per month financial aid... disbursed directly into the Aadhaar linked bank account through DBT...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 2 financial assistance clause."
+    },
+    {
+      "faq_id": "FAQ-MLB-04",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Documents",
+      "question_en": "I do not have a Domicile Certificate. Can I still apply for Ladki Bahin Yojana?",
+      "question_hi": "मेरे पास अधिवास प्रमाणपत्र (Domicile Certificate) नहीं है। क्या मैं फिर भी लाड़की बहिन योजना के लिए आवेदन कर सकती हूँ?",
+      "answer_en": "Yes. If an official Domicile Certificate is not available, the approved guidelines allow you to submit alternative residency proofs showing at least 15 years in Maharashtra, such as: a 15-year-old Ration Card, Voter ID Card, School Leaving Certificate, or Birth Certificate showing birth in Maharashtra.",
+      "answer_hi": "हाँ। यदि आधिकारिक अधिवास प्रमाणपत्र उपलब्ध नहीं है, तो स्वीकृत दिशानिर्देशों के तहत आप महाराष्ट्र में 15 वर्ष के निवास को दर्शाने वाले वैकल्पिक दस्तावेज दे सकती हैं, जैसे: 15 वर्ष पुराना राशन कार्ड, मतदाता पहचान पत्र, स्कूल छोड़ने का प्रमाणपत्र (TC), या महाराष्ट्र का जन्म प्रमाणपत्र।",
+      "simple_answer_en": "✅ Yes! You can use an old ration card (15 years), Voter ID, or School Leaving Certificate instead.",
+      "simple_answer_hi": "✅ हाँ! अगर डोमिसाइल नहीं है, तो 15 साल पुराना राशन कार्ड, वोटर आईडी या स्कूल छोड़ने का दाखिला (टीसी) भी चल जाएगा।",
+      "source_fields": ["documents_required"],
+      "evidence_quotes": [
+        "GR Section 5: 'Proof of Maharashtra Domicile (Domicile Certificate, OR 15-year-old Ration Card, Voter ID, School Leaving Certificate...)'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 5 alternative document flexibilities."
+    },
+    {
+      "faq_id": "FAQ-MLB-05",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Exclusion",
+      "question_en": "My family owns an agricultural tractor and a motorcycle. Does this disqualify me from the scheme?",
+      "question_hi": "मेरे परिवार के पास खेती का एक ट्रैक्टर और एक मोटरसाइकिल है। क्या इससे मैं योजना से अपात्र हो जाऊँगी?",
+      "answer_en": "No. While the scheme excludes families who own a four-wheeler vehicle, agricultural tractors are explicitly exempted from this disqualification under Section 4(e) of the guidelines. Two-wheelers such as motorcycles are also not disqualifiers.",
+      "answer_hi": "नहीं। यद्यपि योजना चार पहिया वाहन (फोर-व्हीलर) के मालिक परिवारों को बाहर करती है, लेकिन दिशानिर्देशों के खंड 4(e) के तहत कृषि ट्रैक्टर को इस नियम से स्पष्ट छूट दी गई है। मोटरसाइकिल जैसे दोपहिया वाहन भी बाधा नहीं हैं।",
+      "simple_answer_en": "✅ You are still eligible! Farm tractors and two-wheelers are allowed.",
+      "simple_answer_hi": "✅ आप पात्र हैं! खेती के ट्रैक्टर और बाइक/स्कूटर पर कोई रोक नहीं है। सिर्फ कार या अन्य फोर-व्हीलर नहीं होना चाहिए।",
+      "source_fields": ["exclusion_criteria"],
+      "evidence_quotes": [
+        "GR Section 4(e): 'Any family member owns a four-wheeler vehicle (tractors are exempted).'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 4(e) tractor exemption."
+    },
+    {
+      "faq_id": "FAQ-MLB-06",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Application",
+      "question_en": "How can a rural woman without a smartphone or internet connection apply?",
+      "question_hi": "स्मार्टफोन या इंटरनेट कनेक्शन के बिना ग्रामीण महिला कैसे आवेदन कर सकती है?",
+      "answer_en": "Rural women without digital access can apply offline for free. You can submit physical application forms and documents through your local Anganwadi Sevika at the Anganwadi center, the Gram Sevak at the Gram Panchayat, or at a nearby Setu Suvidha Kendra.",
+      "answer_hi": "बिना डिजिटल पहुंच वाली ग्रामीण महिलाएं निःशुल्क ऑफलाइन आवेदन कर सकती हैं। आप अपने नजदीकी आंगनवाड़ी केंद्र में आंगनवाड़ी सेविका, ग्राम पंचायत में ग्राम सेवक, या सेतु सुविधा केंद्र में जाकर भौतिक आवेदन पत्र और दस्तावेज जमा कर सकती हैं।",
+      "simple_answer_en": "📍 Go to your local Anganwadi worker or Gram Panchayat office. They will help you fill the form for free.",
+      "simple_answer_hi": "📍 अपने गांव के आंगनवाड़ी केंद्र में आंगनवाड़ी ताई या ग्राम पंचायत कार्यालय जाएं। वे आपका फॉर्म मुफ्त में भर देंगे।",
+      "source_fields": ["how_to_apply"],
+      "evidence_quotes": [
+        "GR Section 6: 'Offline submission through local Anganwadi Sevika, Gram Sevak at Gram Panchayat, or Setu Suvidha Kendra.'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 6 offline assisted application channels."
+    },
+    {
+      "faq_id": "FAQ-MLB-07",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Exclusion",
+      "question_en": "I already receive ₹1,800 per month under the Sanjay Gandhi Niradhar pension. Can I also get Ladki Bahin?",
+      "question_hi": "मुझे पहले से ही संजय गांधी निराधार योजना के तहत ₹1,800 प्रति माह पेंशन मिलती है। क्या मुझे लाड़की बहिन भी मिल सकती है?",
+      "answer_en": "No. Under Section 4(d) of the guidelines, beneficiaries who already receive ₹1,500 or more per month from any other central or state government financial assistance scheme are disqualified from receiving Ladki Bahin Yojana.",
+      "answer_hi": "नहीं। दिशानिर्देशों के खंड 4(d) के अनुसार, जो लाभार्थी पहले से ही केंद्र या राज्य सरकार की किसी अन्य वित्तीय सहायता योजना से ₹1,500 या उससे अधिक प्रति माह प्राप्त कर रहे हैं, वे लाड़की बहिन योजना के लिए अपात्र हैं।",
+      "simple_answer_en": "❌ No. If you already get ₹1,500 or more each month from another government pension, you cannot receive this scheme.",
+      "simple_answer_hi": "❌ नहीं। यदि आपको सरकार से पहले से ही ₹1,500 या उससे ज्यादा की पेंशन मिल रही है, तो यह दूसरा लाभ नहीं मिलेगा।",
+      "source_fields": ["exclusion_criteria"],
+      "evidence_quotes": [
+        "GR Section 4(d): 'Beneficiary already receives ₹1,500 or more per month from any other central/state government financial assistance scheme...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 4(d) duplication exclusion."
+    },
+    {
+      "faq_id": "FAQ-MLB-08",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Eligibility Fallback",
+      "question_en": "Is this scheme restricted only to certain castes, like SC, ST, or OBC women?",
+      "question_hi": "क्या यह योजना केवल कुछ जातियों, जैसे एससी, एसटी या ओबीसी महिलाओं तक ही सीमित है?",
+      "answer_en": "The approved scheme record confirms that the scheme is universal and not restricted to any specific caste. Women from all social categories (General, SC, ST, OBC, Minority) are eligible, provided they meet the income, age, and residency conditions. No caste certificate is required.",
+      "answer_hi": "स्वीकृत योजना रिकॉर्ड पुष्टि करता है कि यह योजना सार्वभौमिक है और किसी विशिष्ट जाति तक सीमित नहीं है। सभी वर्गों (सामान्य, एससी, एसटी, ओबीसी, अल्पसंख्यक) की महिलाएं पात्र हैं, बशर्ते वे आय, आयु और निवास की शर्तें पूरी करती हों। जाति प्रमाण पत्र की आवश्यकता नहीं है।",
+      "simple_answer_en": "✅ Open to ALL castes! No caste certificate is needed.",
+      "simple_answer_hi": "✅ सभी जातियों की महिलाओं के लिए खुली है! जाति प्रमाण पत्र की कोई जरूरत नहीं है।",
+      "source_fields": ["caste_requirement", "eligibility_conditions"],
+      "evidence_quotes": [
+        "Absence verification: Review of GR Sections 3 & 4 confirms no caste restriction or quota."
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Addresses field 'caste_requirement' which is 'not found' in the approved record."
+    },
+    {
+      "faq_id": "FAQ-MLB-09",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Eligibility Fallback",
+      "question_en": "Is there any educational or school pass requirement to be eligible for Ladki Bahin Yojana?",
+      "question_hi": "क्या लाड़की बहिन योजना के लिए पात्र होने हेतु किसी शैक्षणिक योग्यता या स्कूल पास होने की शर्त है?",
+      "answer_en": "The approved scheme record does not require any minimum educational qualification. Illiterate women and women who have not attended school are fully eligible as long as they satisfy the residency, age (21–65), and income criteria.",
+      "answer_hi": "स्वीकृत योजना रिकॉर्ड में किसी न्यूनतम शैक्षणिक योग्यता की मांग नहीं की गई है। अनपढ़ या स्कूल न जाने वाली महिलाएं भी पूरी तरह से पात्र हैं, जब तक कि वे निवास, आयु (21-65) और आय के मानदंडों को पूरा करती हैं।",
+      "simple_answer_en": "✅ No school or education requirement! Even if you cannot read or write, you can apply.",
+      "simple_answer_hi": "✅ पढ़ाई-लिखाई की कोई शर्त नहीं है! यदि आप स्कूल कभी नहीं गईं, तब भी आप पात्र हैं।",
+      "source_fields": ["educational_qualification", "eligibility_conditions"],
+      "evidence_quotes": [
+        "Absence verification: Review of GR Sections 3 & 4 shows no educational criteria."
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Addresses field 'educational_qualification' which is 'not found' in the approved record."
+    },
+    {
+      "faq_id": "FAQ-MLB-10",
+      "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+      "category": "Application Deadline",
+      "question_en": "What is the official deadline to submit the Majhi Ladki Bahin Yojana application?",
+      "question_hi": "माझी लाड़की बहिन योजना आवेदन जमा करने की आधिकारिक अंतिम तिथि क्या है?",
+      "answer_en": "The initial Phase 1 enrollment deadline specified in the approved record was 30 September 2024, with subsequent government addendums providing extended processing windows for application review.",
+      "answer_hi": "स्वीकृत रिकॉर्ड में उल्लिखित प्रारंभिक चरण 1 की अंतिम तिथि 30 सितंबर 2024 थी, जिसके बाद सरकार ने आवेदन समीक्षा हेतु अतिरिक्त समय सीमा प्रदान की।",
+      "simple_answer_en": "⏰ Phase 1 last date was 30 September 2024 (check local office for extension updates).",
+      "simple_answer_hi": "⏰ पहले चरण की आखिरी तारीख 30 सितंबर 2024 थी (आगे की तारीख के लिए आंगनवाड़ी केंद्र पर पता करें)।",
+      "source_fields": ["deadline"],
+      "evidence_quotes": [
+        "GR Section 7: '30 September 2024 for Phase 1 enrollment...'"
+      ],
+      "is_supported_by_record": true,
+      "grounding_note": "Grounded in Section 7 timelines."
+    }
+  ]
+}

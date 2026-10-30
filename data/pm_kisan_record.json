@@ -1,0 +1,119 @@
+{
+  "scheme_id": "SCHEME-CENTRAL-PMK-001",
+  "scheme_name": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+  "state_or_central": "Central",
+  "state_name": null,
+  "last_approved_date": "2024-09-15",
+  "approved_by": "Senior Research Officer, Scheme Knowledge Unit",
+  "version": "2.1.0",
+  "fields": [
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "scheme_name",
+      "value": "Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)",
+      "evidence": "Title: 'Operational Guidelines of Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)', Ministry of Agriculture & Farmers Welfare, GoI, Sec 1.1, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": "Standard official nomenclature across state and central notifications."
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "department",
+      "value": "Department of Agriculture & Farmers Welfare, Ministry of Agriculture & Farmers Welfare, Government of India",
+      "evidence": "Header & Section 2 'Administrative Machinery', Operational Guidelines, p. 3, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "benefit_amount",
+      "value": "₹6,000 per financial year",
+      "evidence": "Section 3 'Benefit Structure': 'Under the Scheme, an amount of Rs. 6,000/- per year is transferred to farmer families...', p. 4, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "benefit_frequency",
+      "value": "Three equal four-monthly installments of ₹2,000 each (Period 1: April-July, Period 2: August-November, Period 3: December-March) transferred directly to bank accounts via Aadhaar-linked DBT",
+      "evidence": "Section 3.2 'Payment Modality': 'Payment will be made in three four-monthly installments of Rs. 2000/- each through Direct Benefit Transfer (DBT)...', p. 4, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "eligibility_conditions",
+      "value": "All landholder farmer families with cultivable landholding in their names as per state/UT land revenue records. A 'farmer family' is defined as husband, wife, and minor children.",
+      "evidence": "Section 4.1 'Eligible Beneficiaries': 'All landholding farmer families, who have cultivable landholding in their names are eligible to get benefits...', p. 5, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": "Tenant farmers and agricultural laborers without land title in revenue records are not eligible."
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "exclusion_criteria",
+      "value": "The following categories of higher economic status are NOT eligible: (a) All Institutional Landholders; (b) Former and present holders of constitutional posts; (c) Former and present Ministers, MPs, MLAs, MLCs, Mayors, and Zilla Panchayat Chairpersons; (d) All serving or retired officers and employees of Central/State Govt Ministries, Departments, PSEs, and autonomous institutions (excluding Class IV/Multi-Tasking Staff); (e) All superannuated/retired pensioners whose monthly pension is ₹10,000/- or more (excluding Class IV); (f) All persons who paid Income Tax in the last assessment year; (g) Registered professionals such as Doctors, Engineers, Lawyers, Chartered Accountants, and Architects.",
+      "evidence": "Section 4.2 'Exclusions Clause (a) through (g)', Operational Guidelines, pp. 5-6, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": "Crucial exclusion rules to avoid improper disbursement."
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "documents_required",
+      "value": "1. Aadhaar Card (mandatory); 2. Land ownership record / Record of Rights (RoR / Khatauni) showing cultivable land; 3. Active Bank Account seeded and linked with Aadhaar; 4. Active Mobile number linked to Aadhaar for e-KYC authentication.",
+      "evidence": "Section 6 'Verification and Documentation': 'Aadhaar seeding is compulsory for release of installment. Proof of land holding through revenue records...', p. 8, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "how_to_apply",
+      "value": "Self-registration online through PM-KISAN portal (pmkisan.gov.in) under 'Farmers Corner' > 'New Farmer Registration', OR offline via nearest Common Service Centre (CSC) or local Village Nodal Agriculture Officer. Applicant must complete biometric or OTP-based e-KYC.",
+      "evidence": "Section 7.1 'Enrolment Mechanism': 'Eligible farmers can enroll through self-registration on pmkisan.gov.in or via CSC centers upon biometric authentication...', p. 9, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "deadline",
+      "value": "Ongoing scheme without any cutoff deadline; eligible farmer families can register at any time throughout the financial year.",
+      "evidence": "Section 8 'Continuous Enrolment': 'The PM-KISAN scheme is an ongoing demand-driven entitlement; there is no last date for registration...', p. 11, Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "official_link",
+      "value": "https://pmkisan.gov.in",
+      "evidence": "Section 1.2 'Official Portal Reference': 'All citizen services are available at https://pmkisan.gov.in', Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "found",
+      "note": "Official portal domain."
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "income_ceiling",
+      "value": "",
+      "evidence": "Absence verification: Review of Operational Guidelines Section 4 (pp. 5-7), Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "not found",
+      "note": "The scheme does not impose a blanket annual family income ceiling (e.g. ₹2.5L or ₹5L). Instead, economic disqualification is strictly tied to Income Tax payer status and specific high-level occupational exclusions."
+    },
+    {
+      "scheme_ref": "SCHEME-CENTRAL-PMK-001",
+      "field": "minimum_age",
+      "value": "",
+      "evidence": "Absence verification: Review of Operational Guidelines Section 4 (pp. 5-7), Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
+      "confidence": "high",
+      "status": "not found",
+      "note": "No explicit minimum or maximum age limit is mentioned for the landholder head of the family."
+    }
+  ]
+}

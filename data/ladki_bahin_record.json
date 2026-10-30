@@ -1,0 +1,119 @@
+{
+  "scheme_id": "SCHEME-STATE-MAH-MLB-002",
+  "scheme_name": "Mukhyamantri Majhi Ladki Bahin Yojana",
+  "state_or_central": "State",
+  "state_name": "Maharashtra",
+  "last_approved_date": "2024-08-20",
+  "approved_by": "State Lead Policy Analyst, Maharashtra Welfare Unit",
+  "version": "1.4.0",
+  "fields": [
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "scheme_name",
+      "value": "Mukhyamantri Majhi Ladki Bahin Yojana (मुख्यमंत्री माझी लाडकी बहीण योजना)",
+      "evidence": "Govt Resolution (GR) No. WCD-2024/C.R.89/Desk-04, Women & Child Development Dept, Govt of Maharashtra, Preamble p. 1, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Flagship direct cash transfer scheme for women in Maharashtra."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "department",
+      "value": "Department of Women and Child Development, Government of Maharashtra",
+      "evidence": "GR No. WCD-2024/C.R.89/Desk-04, Header, p. 1, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "benefit_amount",
+      "value": "₹1,500 per month",
+      "evidence": "GR Section 2 'Financial Assistance': 'Under the scheme, eligible beneficiary women will be provided Rs. 1,500/- per month financial aid...', p. 2, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "benefit_frequency",
+      "value": "Monthly Direct Benefit Transfer (DBT) deposited directly into beneficiary woman's Aadhaar-linked active bank account",
+      "evidence": "GR Section 2.2 'Disbursement Mode': 'The monthly assistance of Rs. 1,500 shall be disbursed directly into the Aadhaar linked bank account of the beneficiary through DBT...', p. 2, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "eligibility_conditions",
+      "value": "1. Must be a female resident of Maharashtra; 2. Age between 21 years completed up to 65 years; 3. Applies to married, widowed, divorced, abandoned, and destitute women; 4. Combined family annual income from all sources must not exceed ₹2,50,000 (₹2.5 Lakh).",
+      "evidence": "GR Section 3 'Eligibility Criteria': '1. Resident of Maharashtra state. 2. Married, widowed, divorced, abandoned and destitute women in the age group 21 to 65 years. 3. Annual family income up to Rs. 2.50 lakh...', pp. 2-3, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Age 21 is strictly the lower threshold; women under 21 or over 65 are not eligible."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "exclusion_criteria",
+      "value": "Women are NOT eligible if: (a) Family annual income exceeds ₹2.50 Lakh; (b) Any family member is an income tax payer; (c) Any family member is a regular/permanent employee or pensioner of Central/State Government, Board, Corporation, or Local Body (outsourced and contractual employees with family income under ₹2.5L are eligible); (d) Beneficiary already receives ₹1,500 or more per month from any other central/state government financial assistance scheme; (e) Any family member owns a four-wheeler vehicle (tractors are exempted).",
+      "evidence": "GR Section 4 'Ineligibility / Exclusion Clauses (a) through (e)', pp. 3-4, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Crucial distinction: owning a four-wheeler disqualifies, but farm tractors are explicitly exempted."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "documents_required",
+      "value": "1. Aadhaar Card of applicant; 2. Proof of Maharashtra Domicile (Domicile Certificate, OR 15-year-old Ration Card, Voter ID, School Leaving Certificate, or Birth Certificate showing birth in Maharashtra); 3. Income Proof (Income Certificate from Competent Authority, OR Yellow/Orange Ration Card); 4. Self-Declaration (Hamipatra) on scheme terms; 5. Bank Passbook copy of Aadhaar-linked individual bank account.",
+      "evidence": "GR Section 5 'Required Documents', p. 4, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Yellow or Orange ration cards satisfy the income proof requirement directly."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "how_to_apply",
+      "value": "Online through the 'Nari Shakti Doot' mobile application or the official portal ladakibahin.maharashtra.gov.in. Offline submission through local Anganwadi Sevika, Gram Sevak at Gram Panchayat, Ward Offices in urban areas, or Setu Suvidha Kendra.",
+      "evidence": "GR Section 6 'Application Mechanism', p. 5, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Anganwadi workers assist citizens without smartphones free of charge."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "deadline",
+      "value": "30 September 2024 for Phase 1 enrollment (subsequently extended by government notifications for ongoing verification).",
+      "evidence": "GR Section 7 'Timelines' and Addendum circular dated 2024-07-31, p. 1, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": "Phased deadlines."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "official_link",
+      "value": "https://ladakibahin.maharashtra.gov.in",
+      "evidence": "GR Section 8 'Official Portal Reference', p. 6, captured 2024-08-15",
+      "confidence": "high",
+      "status": "found",
+      "note": null
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "caste_requirement",
+      "value": "",
+      "evidence": "Absence verification: Review of GR Sections 3 & 4 (pp. 2-4), captured 2024-08-15",
+      "confidence": "high",
+      "status": "not found",
+      "note": "Scheme is universal across all social categories (General, SC, ST, OBC, Minority); no caste certificate is demanded."
+    },
+    {
+      "scheme_ref": "SCHEME-STATE-MAH-MLB-002",
+      "field": "educational_qualification",
+      "value": "",
+      "evidence": "Absence verification: Review of GR Sections 3 & 4 (pp. 2-4), captured 2024-08-15",
+      "confidence": "high",
+      "status": "not found",
+      "note": "No literacy or educational criteria are mandated for eligibility."
+    }
+  ]
+}
