@@ -12,13 +12,13 @@ def main():
     print("  HAQDARSHAK SCHEME KNOWLEDGE BASE & CITIZEN FAQ AI")
     print("  Scenario A3 · Case Study Assignment")
     print("=" * 70)
-    print("\nStarting local server on: http://localhost:8000")
-    print("Open http://localhost:8000 in your browser to interact with the demo.\n")
+    print("\nStarting local server on: http://127.0.0.1:8080")
+    print("Open http://127.0.0.1:8080 in your browser to interact with the demo.\n")
 
     uvicorn.run(
         "src.app:app",
-        host="0.0.0.0",
-        port=8000,
+        host="127.0.0.1",
+        port=8080,
         reload=False,
         log_level="info"
     )

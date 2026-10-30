@@ -21,7 +21,7 @@ This repository implements **Scenario A3: Citizen FAQ Generator**, strictly adhe
 ## 🚀 Live Interactive Demo & Web Interface
 
 The project includes a full-featured, responsive web workbench and citizen chat interface:
-- **URL:** [http://localhost:8000](http://localhost:8000) (or `http://127.0.0.1:8000`)
+- **URL:** [http://127.0.0.1:8080](http://127.0.0.1:8080) (or `http://localhost:8080`)
 - **Scheme Explorer:** Browse approved scheme records rendered in the exact **6-part field format** (`scheme_ref`, `field`, `value`, `evidence`, `confidence`, `status`, `note`).
 - **Interactive Bilingual Chat:** Real-time conversational interface answering in English and Hindi (हिन्दी).
 - **Low-Literacy Toggle:** 1-click toggle to switch between *Standard Mode* and *Low-Literacy Mode* (icon-based, bottom-line simplified answers for rural citizens).
@@ -51,7 +51,7 @@ python -m pytest tests/ -v
 # 4. Launch the application
 python run.py
 ```
-Open your browser and navigate to **[http://localhost:8000](http://localhost:8000)**.
+Open your browser and navigate to **[http://127.0.0.1:8080](http://127.0.0.1:8080)**.
 
 ---
 
