@@ -3,94 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Haqdarshak · Scheme Knowledge Base & Citizen FAQ AI</title>
-  <meta name="description" content="AI/ML Engineer Case Study: Grounded Bilingual Welfare FAQ Generator with Strict Field Provenance and Hallucination Verification">
+  <title>Haqdarshak · Citizen Scheme Assistant</title>
+  <meta name="description" content="Haqdarshak Citizen Welfare FAQ Assistant: Grounded bilingual assistance for central and state schemes">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/style.css">
 </head>
 <body>
-  <!-- Top Navigation Header -->
+  <!-- Header -->
   <header class="app-header">
     <div class="header-left">
       <div class="brand-badge">
         <div class="brand-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
           </svg>
         </div>
         <div>
-          <h1 class="brand-title">Haqdarshak <span class="badge-tag">AI/ML Case Study A3</span></h1>
-          <p class="brand-subtitle">Grounded Citizen Welfare FAQ Generator & Hallucination Guardrail</p>
+          <h1 class="brand-title">Haqdarshak <span class="badge-tag">Scheme Assistant</span></h1>
+          <p class="brand-subtitle">Official Welfare Entitlement Guidance</p>
         </div>
       </div>
     </div>
 
     <div class="header-center">
       <div class="scheme-selector-wrap">
-        <label for="schemeSelect" class="selector-label">Active Approved Scheme:</label>
+        <label for="schemeSelect" class="selector-label">Current Scheme:</label>
         <select id="schemeSelect" class="scheme-dropdown">
-          <option value="SCHEME-CENTRAL-PMK-001">PM-KISAN (Central Govt · Agriculture)</option>
-          <option value="SCHEME-STATE-MAH-MLB-002">Majhi Ladki Bahin Yojana (Maharashtra · Women)</option>
+          <option value="SCHEME-CENTRAL-PMK-001">PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)</option>
+          <option value="SCHEME-STATE-MAH-MLB-002">Mukhyamantri Majhi Ladki Bahin Yojana</option>
         </select>
       </div>
     </div>
 
     <div class="header-right">
-      <!-- Language Toggle -->
+      <!-- Language Selector -->
       <div class="segmented-control" id="langToggle">
         <button type="button" class="segment-btn active" data-lang="en">EN English</button>
         <button type="button" class="segment-btn" data-lang="hi">हिंदी Hindi</button>
       </div>
 
-      <!-- Literacy Mode Toggle -->
-      <button type="button" class="pill-toggle" id="modeToggle" title="Toggle simplified low-literacy phrasing for rural citizens">
+      <!-- Low-Literacy Easy Mode Toggle -->
+      <button type="button" class="pill-toggle" id="modeToggle" title="Toggle simple, easy-to-read answers with bullet points">
         <span class="pill-icon">🌱</span>
-        <span id="modeText">Standard Mode</span>
+        <span id="modeText">Simple Mode</span>
       </button>
 
-      <!-- Walkthrough Info Modal Trigger -->
-      <button type="button" class="action-btn" id="openWalkthroughBtn" title="View Case Study Walkthrough Answers">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
-        <span>Walkthrough Q&A</span>
+      <!-- Toggle Scheme Record Sidebar -->
+      <button type="button" class="action-btn" id="toggleSidebarBtn" title="View official scheme record">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        <span id="sidebarBtnText">Scheme Details</span>
       </button>
     </div>
   </header>
 
-  <!-- Notification Bar for Assignment Principles -->
-  <aside class="principles-banner" aria-label="Assignment Principles">
-    <div class="principle-item">
-      <span class="principle-num">Principle 1</span>
-      <span><strong>Human-in-the-Loop:</strong> All generated FAQs are drafts grounded solely in verified, approved scheme records.</span>
-    </div>
-    <div class="principle-divider"></div>
-    <div class="principle-item">
-      <span class="principle-num">Principle 2</span>
-      <span><strong>Strict Provenance:</strong> Every fact links to source evidence. If information is absent, the system states it honestly instead of guessing.</span>
-    </div>
-  </aside>
-
-  <!-- Main 3-Column Layout -->
-  <main class="main-layout">
+  <!-- Clean 2-Column Interface -->
+  <main class="main-layout" id="mainLayout">
     
-    <!-- Column 1: Approved Scheme Record Explorer -->
-    <section class="panel panel-scheme">
+    <!-- Left Column: Official Scheme Record (Field Format) -->
+    <aside class="panel panel-scheme" id="schemeSidebar">
       <div class="panel-header">
         <div class="panel-header-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-          <h2>Approved Scheme Record</h2>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+          <h2>Official Scheme Record</h2>
         </div>
-        <span class="meta-pill" id="schemeMetaPill">Version 2.1.0 · Approved</span>
+        <span class="meta-pill" id="schemeMetaPill">Approved</span>
       </div>
 
       <div class="scheme-details-card" id="schemeOverviewCard">
-        <!-- Dynamic Scheme Details -->
-        <div class="loader-box">Loading scheme data...</div>
+        <!-- Loaded dynamically -->
       </div>
 
       <div class="field-filter-bar">
-        <span class="filter-label">Filter Fields:</span>
+        <span class="filter-label">Filter:</span>
         <div class="filter-chips">
           <button type="button" class="chip active" data-filter="all">All (<span id="countAll">0</span>)</button>
           <button type="button" class="chip" data-filter="found">Found (<span id="countFound">0</span>)</button>
@@ -99,49 +85,36 @@
       </div>
 
       <div class="fields-container" id="fieldsList">
-        <!-- Populated dynamically with 6-part SchemeField cards -->
+        <!-- 6-part SchemeField cards -->
       </div>
-    </section>
+    </aside>
 
-    <!-- Column 2: Citizen FAQ & Live Chat Interface -->
+    <!-- Main Column: Citizen Assistant & Chat -->
     <section class="panel panel-chat">
-      <div class="panel-header">
-        <div class="panel-header-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-          <h2>Citizen & Agent Chat Assistant</h2>
-        </div>
-        <div class="chat-badges">
-          <span class="badge-grounded">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-            Auto-Verified
-          </span>
-        </div>
-      </div>
-
-      <!-- Quick-Ask Preset Carousel (8-10 Curated FAQs) -->
+      <!-- Top Preset FAQ Bar -->
       <div class="preset-faqs-section">
         <div class="section-micro-header">
-          <span>Curated Scheme FAQs (8–10 Bilingual Questions)</span>
-          <span class="text-muted" id="faqCountLabel">Showing 10 FAQs</span>
+          <span id="faqHeaderTitle">Frequently Asked Questions</span>
+          <span class="text-muted" id="faqCountLabel">10 Questions</span>
         </div>
         <div class="faq-chip-scroll" id="faqPresets">
-          <!-- Populated dynamically -->
+          <!-- Curated FAQ chips -->
         </div>
       </div>
 
-      <!-- Chat History Box -->
+      <!-- Chat Conversation Area -->
       <div class="chat-scroll" id="chatMessages">
-        <!-- Dynamic conversation bubbles -->
+        <!-- Messages -->
       </div>
 
-      <!-- Chat Input Form -->
+      <!-- Chat Input Box -->
       <form class="chat-input-form" id="chatForm">
         <div class="input-wrapper">
           <input
             type="text"
             id="chatInput"
             class="chat-text-input"
-            placeholder="Ask any question in English or Hindi (e.g., 'Am I eligible if...' / 'क्या मुझे लाभ मिलेगा?')..."
+            placeholder="Ask any question in English or Hindi (e.g., 'Am I eligible if...' / 'क्या मैं पात्र हूँ?')..."
             autocomplete="off"
             required
           >
@@ -152,126 +125,7 @@
       </form>
     </section>
 
-    <!-- Column 3: AI Safety, Hallucination Verifier & Quality Auditor -->
-    <section class="panel panel-inspector">
-      <div class="panel-header">
-        <div class="panel-header-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          <h2>AI Safety & Verification Inspector</h2>
-        </div>
-        <span class="meta-pill pill-secure">Requirement 4</span>
-      </div>
-
-      <!-- Live Verification Status Card -->
-      <div class="inspector-card" id="verificationResultCard">
-        <div class="inspector-card-header">
-          <span class="inspector-title">Active Answer Verification</span>
-          <span class="status-pill status-pill-pass" id="liveVerdictBadge">VERIFIED_GROUNDED</span>
-        </div>
-        <div class="score-display">
-          <div class="score-number-wrap">
-            <span class="score-num" id="liveScoreNum">1.00</span>
-            <span class="score-label">Faithfulness Score</span>
-          </div>
-          <div class="score-bar-bg">
-            <div class="score-bar-fill" id="liveScoreBar" style="width: 100%;"></div>
-          </div>
-        </div>
-        <div class="inspection-details" id="liveInspectionDetails">
-          <p class="detail-line"><strong>Explanation:</strong> <span id="liveExplanation">Ask a question to see real-time claim verification against scheme fields.</span></p>
-          <div id="liveMatchedBox" class="claims-box claims-pass">
-            <strong>Matched Scheme Fields:</strong>
-            <ul id="liveMatchedList"><li>eligibility_conditions</li></ul>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hallucination Attack Simulator -->
-      <div class="inspector-card attack-card">
-        <div class="inspector-card-header">
-          <span class="inspector-title">Hallucination Trap Simulator</span>
-          <span class="badge-tag">Test Guardrail</span>
-        </div>
-        <p class="card-desc">Simulate a malicious or hallucinated LLM response to see the automated verifier reject it in real time:</p>
-        <div class="attack-presets">
-          <button type="button" class="attack-btn" id="attackFakeAmountBtn">
-            🚨 Fake Amount Attack (₹25,000 + Free Pump)
-          </button>
-          <button type="button" class="attack-btn" id="attackNotFoundClaimBtn">
-            ⚠️ Assert Positive on 'Not Found' Income Limit
-          </button>
-        </div>
-      </div>
-
-      <!-- Hindi Quality QA Inspector (Walkthrough Question) -->
-      <div class="inspector-card hindi-card">
-        <div class="inspector-card-header">
-          <span class="inspector-title">Hindi QA Quality Framework</span>
-          <span class="badge-tag">Walkthrough Focus</span>
-        </div>
-        <p class="card-desc">Programmatic verification for non-fluent engineers (Script Unicode, Civic Glossary, Readability):</p>
-        <div class="hindi-metrics-grid" id="hindiMetricsGrid">
-          <div class="metric-cell">
-            <span class="metric-val" id="metricScript">100%</span>
-            <span class="metric-name">Devanagari Script</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-val" id="metricTerms">100%</span>
-            <span class="metric-name">Civic Glossary</span>
-          </div>
-          <div class="metric-cell">
-            <span class="metric-val" id="metricReadability">High</span>
-            <span class="metric-name">Citizen Clarity</span>
-          </div>
-        </div>
-        <button type="button" class="btn-outline full-width" id="runHindiAuditBtn">
-          Run 4-Pillar Hindi Quality Audit
-        </button>
-      </div>
-
-      <!-- Cost & Pricing Estimator per Scheme -->
-      <div class="inspector-card cost-card">
-        <div class="inspector-card-header">
-          <span class="inspector-title">Model Pricing per Scheme</span>
-          <span class="badge-tag">Cost Analysis</span>
-        </div>
-        <div class="cost-summary-list">
-          <div class="cost-item">
-            <span>Model Selection:</span>
-            <strong>Gemini 1.5 Flash / GPT-4o-mini</strong>
-          </div>
-          <div class="cost-item">
-            <span>Tokens per Scheme (Record + 10 FAQs):</span>
-            <strong>~5,300 tokens</strong>
-          </div>
-          <div class="cost-item">
-            <span>Estimated Cost per Scheme:</span>
-            <strong class="text-highlight">₹0.32 INR ($0.0038 USD)</strong>
-          </div>
-          <div class="cost-item">
-            <span>5,000 Schemes Catalog Draft:</span>
-            <strong>~₹1,600 INR (~$19 USD)</strong>
-          </div>
-        </div>
-      </div>
-    </section>
   </main>
-
-  <!-- Walkthrough Q&A Slide-out Modal -->
-  <div class="modal-backdrop" id="walkthroughModal">
-    <div class="modal-content">
-      <div class="modal-header">
-        <div>
-          <h2>AI/ML Engineer Walkthrough Notes & Rationale</h2>
-          <p class="modal-sub">Direct responses to the required 4 walkthrough questions and working principles</p>
-        </div>
-        <button type="button" class="modal-close-btn" id="closeModalBtn">&times;</button>
-      </div>
-      <div class="modal-body" id="walkthroughContent">
-        <!-- Rendered dynamically -->
-      </div>
-    </div>
-  </div>
 
   <script src="/static/app.js"></script>
 </body>

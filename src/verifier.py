@@ -109,23 +109,24 @@ class RecordFaithfulnessVerifier:
         # 4. Check numerical entity consistency
         # Aggregate all text from referenced record fields
         record_context = " ".join([f"{f.value} {f.evidence}" for f in valid_fields])
-        record_numbers = set(self.extract_numerical_entities(record_context))
-        answer_numbers = self.extract_numerical_entities(answer)
-
-        # Detect any numbers in the answer that do not exist anywhere in the scheme record
         all_scheme_context = " ".join([f"{f.value} {f.evidence}" for f in scheme.fields if f.status == "found"])
         all_scheme_numbers = set(self.extract_numerical_entities(all_scheme_context))
+        
+        # Numbers mentioned by the user in their own question (e.g. "I am 19 years old", "income is 2.8L")
+        question_numbers = set(self.extract_numerical_entities(question))
+
+        answer_numbers = self.extract_numerical_entities(answer)
 
         conflicting_numbers = []
         for num in answer_numbers:
-            # Skip common generic conversational single-digit numbers if harmless (e.g. 1st, 2nd, 3 reasons)
-            if num in all_scheme_numbers:
+            # If the number exists in the record or was introduced by the user in the question, it's valid
+            if num in all_scheme_numbers or num in question_numbers:
                 continue
             # If the number is large or specific (like monetary figures or ages), flag as hallucinated
             try:
                 val = float(num)
                 # Ignore small formatting list numbers like 1, 2, 3, 4
-                if val in [1.0, 2.0, 3.0, 4.0, 5.0] and ("1." in answer or "2." in answer or "3." in answer):
+                if val in [1.0, 2.0, 3.0, 4.0, 5.0, 6.0, 7.0, 8.0, 9.0, 10.0]:
                     continue
                 conflicting_numbers.append(num)
             except ValueError:
