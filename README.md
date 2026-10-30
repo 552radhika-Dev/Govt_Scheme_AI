@@ -1,64 +1,139 @@
-# Haqdarshak Scheme Knowledge Base: Citizen FAQ Generator & AI Safety Guardrail
+# Haqdarshak Scheme AI: Citizen Welfare FAQ Generator
 **AI/ML Engineer Case Study Assignment · Scenario A3**
 
-[![Tests](https://img.shields.io/badge/Unit%20Tests-12%20Passed-emerald.svg)](https://github.com/552radhika-Dev/Govt_Scheme_AI)
-[![Python](https://img.shields.io/badge/Python-3.14-blue.svg)](https://python.org)
+[![Unit Tests](https://img.shields.io/badge/Unit%20Tests-12%20Passed-emerald.svg)](https://github.com/552radhika-Dev/Govt_Scheme_AI)
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.14-blue.svg)](https://python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115+-009688.svg)](https://fastapi.tiangolo.com)
-[![License](https://img.shields.io/badge/License-Proprietary%20%2F%20Haqdarshak%20Evaluation-orange.svg)](#)
+[![License](https://img.shields.io/badge/License-Haqdarshak%20Evaluation-orange.svg)](#)
 
 ---
 
-## 📌 Executive Summary
+## ⚡ How to Run the Project (Quick Start)
 
-At Haqdarshak, millions of Indian citizens rely on community agents (*Haqdarshaks*) to identify and access welfare entitlements across 5,000+ central and state schemes. In civic welfare, **a confident wrong answer is catastrophic**: telling an ineligible family they qualify causes wasted travel, lost wages, and disillusionment; incorrectly telling an eligible family they are disqualified denies them critical livelihood support.
-
-This repository implements **Scenario A3: Citizen FAQ Generator**, strictly adhering to Haqdarshak's two core operational principles:
-1. **Human-in-the-Loop Principle:** Whatever AI produces is a draft; all live answers are grounded solely in verified, approved scheme records.
-2. **Strict Provenance & Zero-Guess Principle:** Every factual claim points directly back to its source field and official evidence excerpt. If the record lacks information, the system **honestly states its absence rather than guessing**.
-
----
-
-## 🚀 Live Interactive Demo & Web Interface
-
-The project includes a full-featured, responsive web workbench and citizen chat interface:
-- **URL:** [http://127.0.0.1:8080](http://127.0.0.1:8080) (or `http://localhost:8080`)
-- **Scheme Explorer:** Browse approved scheme records rendered in the exact **6-part field format** (`scheme_ref`, `field`, `value`, `evidence`, `confidence`, `status`, `note`).
-- **Interactive Bilingual Chat:** Real-time conversational interface answering in English and Hindi (हिन्दी).
-- **Low-Literacy Toggle:** 1-click toggle to switch between *Standard Mode* and *Low-Literacy Mode* (icon-based, bottom-line simplified answers for rural citizens).
-- **AI Safety & Hallucination Inspector (Requirement 4):** Live visual display showing the entailment score, referenced fields, and instant interception of simulated hallucination attacks.
-- **Walkthrough Modal:** One-click in-app reference for all 4 presentation questions.
-
----
-
-## 🛠️ Quickstart & How to Run
-
-### Prerequisites
-- Python 3.10+ (tested on Python 3.14)
+### 1. Prerequisites
+- Python 3.10 or higher
 - Git
 
-### Installation & Launch
+### 2. Steps to Run Locally
+
 ```bash
-# 1. Clone repository
+# Step 1: Clone the repository
 git clone https://github.com/552radhika-Dev/Govt_Scheme_AI.git
 cd Govt_Scheme_AI
 
-# 2. Install dependencies
+# Step 2: Install dependencies
 pip install -r requirements.txt
 
-# 3. Run unit test suite (12 tests verifying grounding, verification, & fallback)
+# Step 3: Run automated test suite (Verifies 12 tests)
 python -m pytest tests/ -v
 
-# 4. Launch the application
+# Step 4: Start the web application
 python run.py
 ```
-Open your browser and navigate to **[http://127.0.0.1:8080](http://127.0.0.1:8080)**.
+
+### 3. Open in Browser
+Once running, open your browser and navigate to:
+👉 **[http://127.0.0.1:8080](http://127.0.0.1:8080)** (or `http://localhost:8080`)
 
 ---
 
-## 📂 Architecture & Data Models
+## 🔗 Quick Links
+- **GitHub Repository:** [https://github.com/552radhika-Dev/Govt_Scheme_AI](https://github.com/552radhika-Dev/Govt_Scheme_AI)
+- **Live Local App:** [http://127.0.0.1:8080](http://127.0.0.1:8080)
+- **Offline Submission Zip:** `Govt_Scheme_AI_submission.zip` (available in root directory)
 
-### 1. The 6-Part Scheme Field Specification
-Every scheme record strictly implements the field schema defined in the Case Study brief:
+---
+
+## 💡 Simple Explanations: Core Principles & Assumptions
+
+### 1. What Problem Are We Solving?
+Rural citizens and community agents (*Haqdarshaks*) repeatedly ask questions about 5,000+ government welfare schemes. 
+In government welfare, **a confident wrong answer is dangerous**:
+- Telling an ineligible person they qualify leads to wasted travel, application fees, and disillusionment.
+- Telling an eligible person they are disqualified deprives a poor family of critical money or rations.
+
+We built an AI FAQ Assistant that strictly answers **only from the approved scheme record**, cites the exact document source, and **honestly says "I do not know" when a rule is not in the record**.
+
+---
+
+### 2. Main Assumptions Made (And Why)
+
+1. **The Scheme Record is 100% Ground Truth:**
+   - *Assumption:* If a detail (like an income ceiling or age limit) is not written in the official scheme record, the AI treats it as **unknown**.
+   - *Why:* The AI must never guess or use generic internet knowledge for official government rules.
+2. **Two User Personas (Citizen vs Community Agent):**
+   - *The Citizen:* Needs an instant bottom-line answer in simple words (`✅ Yes, you qualify`).
+   - *The Community Agent:* Needs the exact government clause and page number to defend the citizen's application at the block/tehsil office.
+3. **Offline & Self-Contained First:**
+   - *Assumption:* Field workers frequently face bandwidth limits or lack paid API credits.
+   - *Why:* The system runs deterministic verification and semantic matching locally without requiring external paid API keys.
+
+---
+
+### 3. What We Deliberately Left Out (And Why)
+
+1. **Open-Ended Generative "Guessing":**
+   - *Left out:* Allowing an LLM to extrapolate or "make up" plausible answers when uncertain.
+   - *Why:* Free-form generative AI often hallucinates plausible rules (e.g. guessing age 18 when the rule says 21). In welfare, strict honest refusal is much safer.
+2. **Heavy Database Infrastructure (Postgres/Docker):**
+   - *Left out:* Complex SQL database servers.
+   - *Why:* Validated JSON records and in-memory caches allow any evaluator or field agent to run the code on a laptop in seconds without database configuration.
+3. **Voice / Speech Engines:**
+   - *Left out:* Audio speech-to-text models.
+   - *Why:* Kept the repository focused squarely on the core AI/ML challenges: **strict groundedness, attribution, and hallucination prevention**.
+
+---
+
+## 🎙️ Walkthrough Questions & Plain-English Answers
+
+### Q1. One decision you made, and the option you decided against?
+- **Decision Made:** **Strict Extractive Grounding with Honest Fallbacks.** When an answer is missing or unsupported, the AI explicitly states: *"The official approved record does not contain this information."*
+- **Option Decided Against:** **Open Conversational Generative RAG.** Decided against letting the AI fill in gaps from memory, because false positives cause direct financial and emotional harm to poor families.
+
+---
+
+### Q2. Where does your work fall short, and how would someone notice?
+- **Where it falls short:**
+  1. *Regional Rural Dialects:* The Hindi answers use standard Khari Boli Hindi. While correct, it can feel formal to citizens speaking rural dialects (like Ahirani, Varhadi, or Bhojpuri).
+  2. *Last-Minute Circulars:* State departments frequently amend rules via local WhatsApp circulars. A brand-new extension announced yesterday won't be known until the record is updated.
+- **How someone would notice:** A rural field agent will notice that the Hindi phrasing sounds formal like a textbook, or an applicant might bring a local gazette notification with an amended deadline not yet in the central knowledge base.
+
+---
+
+### Q3. How did you check the quality of Hindi answers, especially if not fluent?
+We implemented a **4-pillar automated quality checker** in Python (`src/hindi_checker.py`):
+1. **Civic Welfare Glossary Audit:** An automated dictionary check ensuring core government terms are translated accurately (e.g., Direct Benefit Transfer $\to$ *प्रत्यक्ष लाभ अंतरण*, Domicile $\to$ *अधिवास प्रमाणपत्र*, Beneficiary $\to$ *लाभार्थी*).
+2. **Script Purity & Leakage Check:** Regex check verifying that Devanagari Unicode coverage exceeds 85% and no untranslated English words leak into the response.
+3. **Sentence Length & Readability:** Programmatically verified that sentences stay under 18 words to ensure high readability for low-literacy citizens.
+4. **Back-Translation Verification:** Translated Hindi back to English to verify that the core factual eligibility criteria remained unchanged.
+5. **Human-in-the-Loop Review:** Designed a workflow where 5% of drafts are reviewed by native-speaking women field agents (*Haqdarshaks*) before production deployment.
+
+---
+
+### Q4. An answer is accurate but hard to follow for someone with low literacy. How do you balance accuracy and clarity?
+We built the **3-Tier Progressive Disclosure Framework**:
+- **Tier 1 — The Bottom Line (Instant Visual Clarity):** Starts with an unmistakable visual icon and one direct sentence:
+  - `✅ हाँ, आप पात्र हैं` (Yes, you are eligible)
+  - `❌ नहीं, आप पात्र नहीं हैं` (No, you are not eligible)
+  - `💰 ₹1,500 हर महीने सीधे बैंक खाते में` (₹1,500 every month in your bank)
+- **Tier 2 — Actionable 3-Point Bullets:** Replaces legal jargon with everyday spoken terms (e.g., instead of *"सक्षम प्राधिकारी द्वारा निर्गत अधिवास प्रमाण पत्र"*, say *"15 साल पुराना राशन कार्ड या स्कूल की टीसी"*).
+- **Tier 3 — Collapsible Official Evidence Drawer:** Retains the exact government resolution number and source clause in an expandable drawer for the community agent to verify.
+
+---
+
+### Q5. Model Selection & Cost per Scheme
+- **Recommended Model:** **Gemini 1.5 Flash** or **GPT-4o-mini** (with structured JSON mode).
+- **Token Budget per Scheme:** ~3,500 input tokens + ~1,800 output tokens (~5,300 tokens total).
+- **Cost per Scheme:** **~₹0.30 INR ($0.0035 USD)** per scheme record.
+- **Cost for 5,000 Schemes:**
+  - Generating the complete national catalog of **5,000 schemes costs only ~₹1,500 INR (~$18 USD)**.
+  - Ongoing monthly verification updates: **under ₹100 INR (~$1.20 USD) per month**.
+
+---
+
+## 📋 The 6-Part Scheme Field Specification
+
+Every scheme record in `data/` implements the 6-part schema required by the Case Study brief:
 ```json
 {
   "scheme_ref": "SCHEME-CENTRAL-PMK-001",
@@ -71,7 +146,7 @@ Every scheme record strictly implements the field schema defined in the Case Stu
 }
 ```
 
-When a field is missing from official guidelines (e.g., `income_ceiling` for PM-KISAN, or `caste_requirement` for Ladki Bahin), it is explicitly recorded as:
+When information is absent from official guidelines, it is recorded explicitly with status `"not found"`:
 ```json
 {
   "scheme_ref": "SCHEME-CENTRAL-PMK-001",
@@ -80,91 +155,20 @@ When a field is missing from official guidelines (e.g., `income_ceiling` for PM-
   "evidence": "Absence verification: Review of Operational Guidelines Section 4 (pp. 5-7), Doc-Ref: AGRI-GOI-PMK-2023, captured 2024-09-10",
   "confidence": "high",
   "status": "not found",
-  "note": "The scheme does not impose an annual income ceiling; disqualification is strictly role/tax-payer based."
+  "note": "The scheme does not impose an annual family income ceiling; disqualification is strictly tax-payer and role-based."
 }
 ```
 
-### 2. Implemented Welfare Schemes
-1. **Pradhan Mantri Kisan Samman Nidhi (PM-KISAN)**
-   - *Scope:* Central Sector Scheme (Agriculture & Farmers Welfare)
-   - *Key Rules:* Direct DBT of ₹6,000/yr (3 installments of ₹2,000); requires land ownership title; excludes institutional landholders, income tax payers, government employees, and pensioners with pension ≥ ₹10,000.
-2. **Mukhyamantri Majhi Ladki Bahin Yojana**
-   - *Scope:* State Government of Maharashtra (Women & Child Development)
-   - *Key Rules:* Monthly DBT of ₹1,500 for resident women aged 21–65; annual family income ≤ ₹2.5 Lakh; yellow/orange ration card flexibility; 4-wheeler vehicle exclusion with explicit exemption for agricultural tractors.
-
 ---
 
-## 🛡️ Requirement 4: Automated Hallucination & Faithfulness Verifier
+## 🧪 Automated Unit Test Suite
 
-The verifier (`src/verifier.py`) acts as an automated safety guardrail that inspects candidate answers before they reach community agents or citizens:
+Run all tests with:
+```bash
+python -m pytest tests/ -v
+```
 
-1. **Attribution Check:** Answers must cite verified fields from the approved scheme record.
-2. **Affirmative-on-Absent Interception:** If a field is marked `not found`, any affirmative claim (e.g. inventing an income cap of ₹3.5L) is immediately blocked with verdict `UNSUPPORTED_HALLUCINATION`.
-3. **Numerical & Entity Consistency:** Extracts currency amounts, age bounds, and frequencies. Conflicting numbers (e.g., ₹25,000 instead of ₹6,000) are flagged and rejected.
-4. **Semantic Entailment:** Validates semantic keyword anchors against the record's source evidence.
-5. **Honest Fallback Validation:** If an answer admits that the record does not contain the answer, the verifier assigns a 1.0 score under verdict `RECORD_LACKS_INFO_HONEST_FALLBACK`.
-
-### Hallucination Attack Simulation
-You can trigger test attacks directly in the UI:
-- **Fake Amount Attack:** Injects a claim that the government provides a bonus of ₹25,000 and a solar pump $\to$ **Intercepted and blocked**.
-- **Not Found Field Attack:** Asserts a positive income limit for PM-KISAN $\to$ **Intercepted and blocked**.
-
----
-
-## 🎙️ 10-Minute Walkthrough: Presentation Notes & Q&A
-
-### 1. One decision you made, and the option you decided against
-- **Decision Made:** **Strict Extractive & NLI-Grounded Verification with Deterministic Fallbacks.** We restricted FAQ answers strictly to verified fields in the approved scheme record, with an explicit refusal when information is absent.
-- **Option Decided Against:** **Open-Ended Generative LLM RAG.** We rejected allowing an LLM to "fill in the gaps" using its parametric memory. While open generation feels smoother conversational, it routinely hallucinates plausible-sounding eligibility criteria (e.g., guessing an age limit of 18 when the rule says 21, or inventing income thresholds). In welfare entitlements, false positives cause severe hardship.
-
-### 2. Where your work falls short, and how someone would notice
-- **Where it falls short:**
-  1. *Sub-circular & Gazette Amendments:* Our scheme records are modeled as structured canonical fields. In reality, state departments release frequent amendments via government resolutions (GRs) and WhatsApp circulars that may temporarily override base rules (e.g., extending a deadline by 15 days).
-  2. *Dialectal Nuance:* The Hindi answers use standard Khari Boli Hindi. While grammatically sound, they may sound formal to rural citizens accustomed to regional dialects (e.g., Ahirani, Varhadi, or Bhojpuri).
-- **How someone would notice:** A rural Haqdarshak field agent in a village would notice if a citizen asks in local colloquial dialect and receives formal textbook Hindi, or if a citizen brings a local taluka-level circular with an extension that has not yet been merged into the central knowledge base.
-
-### 3. The main assumptions you made, and why
-- **Assumption 1: Scheme Record as Ground Truth.** We assume that if a piece of information is missing from the approved record, it must be treated as unknown—even if external general knowledge suggests an answer. This enforces Haqdarshak's Principle 2.
-- **Assumption 2: Dual User Persona.** We assume two end users: the *last-mile citizen* (needs low-cognitive-load, bottom-line answers) and the *Haqdarshak agent* (needs the official clause and legal citation to defend the application).
-- **Assumption 3: Offline Operability.** We designed the engine to run deterministic verification locally without mandatory third-party external API keys, ensuring reliable deployment in bandwidth-constrained rural environments.
-
-### 4. Also Explain: How you checked the quality of the Hindi answers, especially if you are not fluent
-We implemented a **4-pillar programmatic evaluation pipeline** (`src/hindi_checker.py`):
-1. **Civic Welfare Terminology Alignment:** Maintained a bilingual domain dictionary of 20+ core civic terms (e.g., DBT $\to$ प्रत्यक्ष लाभ अंतरण / सीधे बैंक खाते में, Domicile $\to$ अधिवास प्रमाणपत्र, Beneficiary $\to$ लाभार्थी). The test suite automatically fails any Hindi translation that drops or mistranslates these terms.
-2. **Script Integrity & Leakage Check:** Automated regex auditing verifying that Devanagari Unicode coverage exceeds 85% and that untranslated English jargon (outside standard abbreviations like CSC or DBT) does not leak into the response.
-3. **Readability & Cognitive Load Heuristic:** Programmatically measured average sentence length (target $\le$ 18 words) and Devanagari danda punctuation spacing to prevent dense, Sanskritized bureaucratic phrasing.
-4. **Back-Translation Semantic Consistency:** Ran English $\to$ Hindi $\to$ English roundtrip checks to verify that core eligibility assertions retained identical semantic meaning without drift.
-5. **Human-in-the-Loop Field Agent Review:** Designed a staged sampling workflow where bilingual community agents review 5% of drafts before promotion to production.
-
-### 5. A Question About How You Work: An answer is accurate but hard to follow for someone with low literacy. How do you balance accuracy and clarity?
-We solve this using our **3-Tier Progressive Disclosure Framework**:
-- **Tier 1 — The Bottom Line (Instant Visual Clarity):** A single sentence starting with an unmistakable visual indicator:
-  - `✅ हाँ, आप पात्र हैं` (Yes, you are eligible)
-  - `❌ नहीं, आप पात्र नहीं हैं` (No, you are not eligible)
-  - `💰 ₹1,500 हर महीने सीधे बैंक खाते में` (₹1,500 every month in your bank)
-- **Tier 2 — Actionable 3-Point Bullets:** Replace legal jargon with everyday language (e.g., instead of *"सक्षम प्राधिकारी द्वारा निर्गत अधिवास प्रमाण पत्र"*, say *"15 साल पुराना राशन कार्ड या स्कूल की टीसी"*).
-- **Tier 3 — Collapsible Official Evidence Drawer:** Retain the exact legal clause, Government Resolution number, and source quote in a collapsible drawer. The citizen gets simple clarity, while the Haqdarshak field agent has the exact legal citation to advocate on their behalf.
-
----
-
-## 💰 AI Model Selection & Cost-per-Scheme Analysis
-
-If powered by an external LLM for initial draft generation and verification:
-- **Recommended Model:** **Gemini 1.5 Flash** or **GPT-4o-mini** (with structured JSON output mode).
-- **Token Budget per Scheme:**
-  - Input (Scheme circular text + formatting instructions): ~3,500 tokens
-  - Output (10 Bilingual FAQs + Citations + Fallbacks): ~1,800 tokens
-- **Estimated Cost per Scheme:**
-  - Gemini 1.5 Flash: **~₹0.28 to ₹0.35 INR ($0.0035 USD)** per scheme record.
-- **Scaling to 5,000 Schemes:**
-  - Total initial catalog generation: **~₹1,500 to ₹1,800 INR (~$18–$22 USD)**.
-  - Ongoing monthly updates (assuming 5% of schemes update each month): **~₹90 INR (~$1.10 USD) per month**.
-
----
-
-## 🧪 Test Suite & Verification Results
-
-All 12 automated tests run in `< 0.5s`:
+Output (12/12 passing in < 0.4s):
 ```
 tests/test_faq_engine.py::test_faq_count_per_scheme PASSED
 tests/test_faq_engine.py::test_query_pm_kisan_english PASSED
@@ -183,7 +187,41 @@ tests/test_verifier.py::test_verifier_catches_affirmative_claim_on_not_found_fie
 
 ---
 
-## 👥 Authorship & Submission Details
-- **Candidate:** AI/ML Engineer Applicant
-- **Organization:** Haqdarshak Empowerment Solutions
-- **Repository:** [https://github.com/552radhika-Dev/Govt_Scheme_AI](https://github.com/552radhika-Dev/Govt_Scheme_AI)
+## 📁 Repository Directory Structure
+
+```
+Govt_Scheme_AI/
+├── README.md                      # Complete documentation & walkthrough explanations
+├── requirements.txt               # Dependencies (fastapi, uvicorn, pydantic, pytest)
+├── run.py                         # One-line application launcher (starts on port 8080)
+├── .gitignore                     # Git ignore rules
+│
+├── data/
+│   ├── pm_kisan_record.json       # PM-KISAN scheme record (6-part schema)
+│   ├── ladki_bahin_record.json    # Maharashtra Ladki Bahin record (6-part schema)
+│   └── faq_catalog.json           # 20 Curated Bilingual FAQs with field citations
+│
+├── src/
+│   ├── app.py                     # FastAPI REST server & static router
+│   ├── models.py                  # Pydantic schemas (SchemeField, FAQItem, etc.)
+│   ├── knowledge_base.py          # Scheme record loader & provenance tracker
+│   ├── faq_engine.py              # Bilingual Q&A engine with strict fallback
+│   ├── verifier.py                # Silent hallucination & faithfulness checker
+│   └── hindi_checker.py           # 4-pillar Hindi quality verification module
+│
+├── static/
+│   ├── index.html                 # Clean, user-focused 2-column web UI
+│   ├── style.css                  # Modern, responsive styling system
+│   └── app.js                     # Interactive client logic & language switcher
+│
+└── tests/
+    ├── test_knowledge_base.py     # Schema compliance tests
+    ├── test_verifier.py           # Hallucination guardrail tests
+    └── test_faq_engine.py         # Bilingual Q&A & fallback tests
+```
+
+---
+
+## 👥 Submission Information
+- **Assignment:** Haqdarshak AI/ML Engineer Case Study (Scenario A3)
+- **GitHub Repository:** [https://github.com/552radhika-Dev/Govt_Scheme_AI](https://github.com/552radhika-Dev/Govt_Scheme_AI)
